@@ -1,0 +1,24 @@
+class Corporative:
+    def __init__(self, name, sity, status):
+        self.name = name
+        self.sity = sity
+        self.status = status
+
+clients_db = [
+    {
+        "name": "Иван Петров",
+        "sity": "Москва",
+        "status": "Наставник"
+    },
+    {
+        "name": "Федор Гавнюков",
+        "sity": "Санкт_Петербург",
+        "status": "Ученик"
+    }
+    ]
+
+for clients in clients_db:
+    client = Corporative(name=clients.get("name"),
+              sity=clients.get("sity"),
+              status=clients.get("status"))
+    print(f'"{client.name}, г. {client.sity}, статус "{client.status}""')
