@@ -1,0 +1,20 @@
+class Billing:
+    def __init__(self, name, money):
+        self.name = name
+        self.money = money
+
+clients_db = [
+    {
+        "name": "Иван Петров",
+        "balance": 50
+    },
+    {
+        "name": "Федор Гавнюков",
+        "balance": 100
+    }
+    ]
+
+for clients in clients_db:
+    client = Billing(name=clients.get("name"),
+              money=clients.get("balance"))
+    print(f'Клиент "{client.name}. Баланс: {client.money} руб')
